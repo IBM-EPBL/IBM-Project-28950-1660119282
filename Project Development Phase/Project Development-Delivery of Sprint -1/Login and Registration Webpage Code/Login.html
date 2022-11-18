@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title> Login </title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        function validate(){
+    var Username = document.login.Username.value;
+    var password = document.login.password.value;
+
+    if(Username == "admin" && password == "admin")
+    {
+    	alert("Login Successfully");
+    	return true;
+    }
+    else
+    {
+    	alert("Login Failed");
+    	return false;
+    }
+    }
+    function myfunction(){
+    var x =document.getElementById("password");
+
+    if(x.type === "password"){
+        x.type = "text";
+    }
+    else{
+        x.type = "password";
+    }
+}
+    </script>
+    </head>
+    <body>
+        <div class="container">
+        <div class="form">
+            <div class="login">
+    <form action="index.html" method="post" name="login" onsubmit="return validate()">
+        <h1> Login </h1>
+        <div class="Username"> <label>Username : </label>
+        <input type="text" name="Username" placeholder="Username" size="20" id="Username"></div>
+        <div class="password"><label>password : </label>
+        <input type="password" name="pass" placeholder="Password" size="20" id="password"></div>
+        <div class="forgot"><a href="" class="text signup-link">Forgot Password?</a> <input type="checkbox" onclick="myfunction()" class="show"><a class="text1"> Show Password</a></div>
+        <div><center><button id="btn" type="submit">Login</button></center></div>
+        <div class="social-icons">
+        	<div class="social-icon facebook"><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=113869198637480&kid_directed_site=0&app_id=113869198637480&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv15.0%2Fdialog%2Foauth%3Fapp_id%3D113869198637480%26auth_type%26cbt%3D1667802295776%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df1ba6276f1c262%2526domain%253Ddevelopers.facebook.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fdevelopers.facebook.com%25252Ff36234788d48a12%2526relation%253Dopener%26client_id%3D113869198637480%26config_id%26display%3Dpopup%26domain%3Ddevelopers.facebook.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Fdocs%252Ffacebook-login%252Fweb%252Flogin-button%252F%26force_confirmation%3Dfalse%26id%3Dfe32f008e45d24%26locale%3Den_US%26logger_id%3D09623361-33c2-4bc1-a39b-ad67149fb531%26messenger_page_id%26origin%3D1%26plugin_prepare%3Dtrue%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df3efef6fe7d85ba%2526domain%253Ddevelopers.facebook.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fdevelopers.facebook.com%25252Ff36234788d48a12%2526relation%253Dopener.parent%2526frame%253Dfe32f008e45d24%26ref%3DLoginButton%26reset_messenger_state%3Dfalse%26response_type%3Dsigned_request%252Ctoken%252Cgraph_domain%26scope%26sdk%3Djoey%26size%3D%257B%2522width%2522%253A600%252C%2522height%2522%253A679%257D%26url%3Ddialog%252Foauth%26version%3Dv15.0%26ret%3Dlogin%26fbapp_pres%3D0%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3efef6fe7d85ba%26domain%3Ddevelopers.facebook.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff36234788d48a12%26relation%3Dopener.parent%26frame%3Dfe32f008e45d24%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=en_GB&pl_dbl=0"><span class="fa fa-facebook"></span></a></div> 
+        	<div class="social-icon google"><a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fdevelopers-dot-devsite-v2-prod.appspot.com%3Fid%3Dauth608766&response_type=permission id_token&scope=email profile openid&openid.realm&include_granted_scopes=true&client_id=351360855136-c65vr13tal2in9b9m1hdmp5dgr4rie3l.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fdevelopers-dot-devsite-v2-prod.appspot.com&fetch_basic_profile=true&gsiwebsdk=2&service=lso&o2v=1&flowName=GeneralOAuthFlow"><span class="fa fa-google"></span></a></div> 
+        </div>
+        <div class="login-signup">
+        <span class="text">Not a member?
+            <a href="signup.html" class="text signup-link">Registration now</a>
+            </span>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

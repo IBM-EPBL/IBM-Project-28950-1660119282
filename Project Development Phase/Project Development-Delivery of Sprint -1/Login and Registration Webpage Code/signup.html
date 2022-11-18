@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" type="text/css" href="signup.css">
+            <script type="text/javascript">
+            function validate(){
+var Username = document.signup.Username.value;
+var Email = document.signup.Email.value;
+var Name = document.signup.name.value;
+var Mobile = document.signup.Mobile.value;
+var Blood = document.signup.Blood.value;
+var Date = document.signup.Date.value;
+var password = document.signup.password.value;
+var password1 = document.signup.password1.value;
+var Gender = document.signup.Gender;
+var x = document.signup.password;
+var sel = document.getElementById("Blood");
+var selectedText = sel.options[sel.selectedIndex].text;
+
+
+if(Username == null || Username == "")
+{
+    alert("Enter Username Name");
+    return false;
+}
+else if(Name == null || Name == "")
+{
+    alert("Enter Email ID");
+    return false;
+}
+else if(Email == null || Email == "")
+{
+    alert("Enter Email ID");
+    return false;
+}
+else if(Mobile == null || Mobile == "")
+{
+    alert("Enter Mobile no");
+    return false;
+}
+else if(document.signup.Blood.selectedIndex=="")
+{
+alert ( "Please select Blood!");
+return false;
+}
+
+else if(Date == null || Date == "")
+{
+    alert("Enter Date Of Birth");
+    return false;
+}
+else if (Gender[0].checked == false && Gender[1].checked == false)
+{
+    alert("please enter gender");
+    return false;
+}
+else if(password == null || password == "")
+{
+    alert("Enter valid password");
+    return false;
+}
+else if(password1 == null || password1 == "")
+{
+    alert("Enter vald confrim password");
+    return false;
+}
+else if(password != password1)
+{
+    alert("password and confrim password not match");
+    return false;
+}
+}
+function showing(){
+    var x =document.getElementById("password");
+    var y =document.getElementById("password1")
+
+    if(x.type === "password"){
+        x.type = "text";
+    }
+    else{
+        x.type = "password";
+    }
+    if(y.type === "password"){
+        y.type = "text";
+    }
+    else{
+        y.type = "password";
+    }
+}
+    </script>
+
+    </head>
+    <body>
+<div class="container">
+        <div class="form">
+            <div class="signup">
+<form action="" name="signup" onsubmit=" validate(); return false">
+        <h1> Registration </h1>
+        <div class="Username"> <label> Username : </label>
+        <input type="text" name="Username" placeholder="Username" size="20" id="Username" pattern="[a-Z0-9]"></div>
+        <div class="name"> <label> Name : </label>
+        <input type="text" name="name" placeholder="name" size="20" id="name" pattern="[a-Z0-9]"></div>
+        <div class="Email"> <label> Email : </label>
+        <input type="Email" name="Email" placeholder="Email" size="20" id="Email" pattern="[a-Z0-9]+@+[a-Z]+.+[a-Z]"></div>
+        <div class="Mobile"> <label> Mobile : </label>
+        <input type="tel" name="Mobile" placeholder="Mobile Number" size="20" id="Mobile" pattern="[6-9]{1}[0-9]{9}"></div>
+        <div class="Blood"> <label> Blood Group : </label>
+            <select name="Blood" id="Blood" class="required">
+                <option value="select">Select</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O+">O+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="O-">O-</option>
+            </select></div>
+        <div class="Date"> <label> DOB : </label>
+        <input type="Date" name="Date" placeholder="Date of Birth" size="20" id="Date"></div>
+        <div class="Gender"> <label>Gender : </label><input type="radio" name="Gender" value="Male" id="Male">Male
+        &nbsp;
+        <input type="radio" name="Gender" value="Female" id="Female">Female</div>
+        <div class="password"> <label> password : </label>
+        <input type="password" name="password" placeholder="Password" size="20" id="password"></div>
+        <div class="password1"> <label> Confrim password : </label>
+        <input type="password" name="password1" placeholder="confrim Password" size="20" id="password1"></div>
+        <error id="alert"></error>
+        <div class="check"> <label><input type="checkbox" id="check" onclick="showing()" >Show Password</label></div>
+        <div> <center><button id="btn" type="submit">Register Now</button></center></div>
+        <div class="login-signup">
+        <span class="text">Already member?
+            <a href="login.html" class="text login-link">Login now</a>
+            </span>
+        </form>
+            </div>
+    </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(logo1.jpg);
+    background-size: 1920px 950px;
+}
+label{
+    width: 140px;
+display: inline-block;
+}
+.container{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    background:#37517e;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px black;
+    overflow: hidden;
+    margin: 0 20px;
+    }
+.social-icons{ 
+        display: flex; 
+        width: 30%; 
+        justify-content: space-between; 
+        padding-bottom: 5px; 
+        padding-left: 175px;
+        padding-top: 10px;} 
+.social-icon{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.4rem; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    cursor: pointer;  } 
+.facebook{ 
+    background-color: #385998; 
+box-shadow: 3px 2px black;} 
+.google { 
+    background-color: #CA3224; 
+box-shadow: 3px 2px black;} 
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #47b2e4;
+    color: white;
+}
+.Username{
+    margin-top: 30px;
+    margin-left: 80px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+.Username input{
+    position: absolute;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+    color: white;
+}
+.Username input:is(:focus, :valid){
+    border-bottom-color: #0ac6ff;
+}
+.password{
+    margin-top: 15px;
+    margin-left: 80px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    }
+.password input{
+    position: absolute;
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+    color: white;
+}
+.password input:is(:focus, :valid){
+    border-bottom-color: #0ac6ff;
+}
+.forgot{
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.show{
+    margin-left:150px;
+    margin-top: 5px;
+
+}
+.form .text{
+    color: #ffff;
+    font-size: 16px;
+}
+
+.form a.text{
+    color: #ffffff;
+    text-decoration: none;
+}
+.form a.text1{
+    color: #ffff;
+}
+.form a.text:hover{
+    color: skyblue;
+    text-decoration: underline;
+}
+button{
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 13px;
+}
+
+button:hover{
+    background-color: #143ba6;
+}
+
+.form .login-signup{
+    margin-top: 12px;
+    text-align: center;
+}
